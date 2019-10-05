@@ -1,18 +1,16 @@
 import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import Cursos from './pages/cursos'
+import Contato from './pages/contato';
+import Menu from './components/menu';
 
 function App() {
   return (
-    <div className="App">
-      <p>Edit <code>src/App.js</code> and save to reload.</p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-        </a>
-
+    <div>
+      <Menu />
+      <Cursos />
+      <Contato />
     </div>
   );
 }
