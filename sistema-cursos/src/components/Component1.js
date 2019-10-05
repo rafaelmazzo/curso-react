@@ -1,5 +1,4 @@
 import React from 'react'
-import css from './component1.css'
 import {Link} from 'react-router-dom'
 
 export default class Component1 extends React.Component {

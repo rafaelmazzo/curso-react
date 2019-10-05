@@ -1,7 +1,7 @@
 import React from 'react'
 import ListaCursos from './lista-curso';
 import ComponenteNome from './component-nome';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class ComponentState extends React.Component {
 
@@ -36,7 +36,7 @@ export default class ComponentState extends React.Component {
                     )}
                 </div>
                 <Link to={'/'}>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                 </Link>
             </div>
         )
