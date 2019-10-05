@@ -1,0 +1,33 @@
+{
+  "name": "projeto-react-impacta-server",
+  "version": "1.0.0",
+  "description": "Projeto React.js curso Impacta",
+  "main": "loader.js",
+  "scripts": {
+    "start":"nodemon loader.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmazzo/projeto-react-impacta.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Rafael Mazzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelmazzo/projeto-react-impacta/issues"
+  },
+  "homepage": "https://github.com/rafaelmazzo/projeto-react-impacta#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "node-restful": "^0.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
