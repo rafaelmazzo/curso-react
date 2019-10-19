@@ -1,45 +1,72 @@
 import React from 'react'
 export default class CursoForm extends React.Component {
+
+    initialState = {
+        descricaoCurso: 'Descrição do Curso'
+    }
+
+    constructor(props) {
+        super(props)
+        this.state = this.initialState;
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                ...this.state,
+                descricaoCurso: 'Batata'
+            });
+        }, 1000)
+    }
+
+    alterarInput = function (descricaoCurso) {
+        console.log(descricaoCurso);
+        console.log(descricaoCurso.target.value);
+        this.setState({ descricaoCurso })
+    }
+
     render() {
         return (
             <div>
                 <h4>Incluir Curso</h4>
                 <form>
-                    <div class="form-group">
-                        <label for="codigoCurso">Código do curso</label>
+                    <div className="form-group">
+                        <label htmlFor="codigoCurso">Código do curso</label>
                         <input
                             type="number"
-                            class="form-control"
-                            id="codigoCurso"                            
+                            className="form-control"
+                            id="codigoCurso"
                             placeholder="Código do curso" />
                     </div>
-                    <div class="form-group">
-                        <label for="descricaoCurso">Descrição do curso</label>
+                    <div className="form-group">
+                        <label htmlFor="descricaoCurso">Descrição do curso</label>
                         <input
+                            value={this.state.descricaoCurso}
+                            onChange={(e) => { this.alterarInput(e) }}
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="descricaoCurso"
                             placeholder="Descrição do curso" />
                     </div>
-                    <div class="form-group">
-                        <label for="cargaHorariaCurso">Carga horária</label>
+                    <div className="form-group">
+                        <label htmlFor="cargaHorariaCurso">Carga horária</label>
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="cargaHorariaCurso"
                             placeholder="Carga horária do curso" />
                     </div>
-                    <div class="form-group">
-                        <label for="valorCurso">Valor</label>
+                    <div className="form-group">
+                        <label htmlFor="valorCurso">Valor</label>
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="valorCurso"
                             placeholder="Valor do curso" />
                     </div>
-                    <div class="form-group">
-                        <label for="categoriaCurso">Example select</label>
-                        <select class="form-control" id="categoriaCurso">
+                    <div className="form-group">
+                        <label htmlFor="categoriaCurso">Example select</label>
+                        <select className="form-control" id="categoriaCurso">
                             <option value=''>Selecione</option>
                             <option value='1'>Informática</option>
                             <option value='2'>Engenharia</option>
@@ -47,7 +74,7 @@ export default class CursoForm extends React.Component {
                             <option value='4'>Redes</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         );
