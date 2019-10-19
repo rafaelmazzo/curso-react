@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Cabecalho from '../../components/cabecalho'
 export default class Contato extends React.Component {
     render() {
         return (
             <div className="container">
-                <h1>Contato</h1>
+                <Cabecalho titulo="Contato" subtitulo="Mazzo Contato" />
             </div>
         )
     }

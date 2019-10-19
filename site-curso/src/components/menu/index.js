@@ -4,12 +4,9 @@ export default class Menu extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a href="#" className="navbar-brand">
-                    Cursos
-                </a>
-                {/* <Link className="navbar-brand" to="/">
-                    Cursos
-                </Link> */}
+                <Link className="navbar-brand" to="/">
+                    Mazzo Cursos
+                </Link>
                 <button className="navbar-toggler" type="button"
                     data-toggle="collapse"
                     data-target="#navbarContent"
@@ -21,20 +18,11 @@ export default class Menu extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <a href="#" className="nav-link">
-                                Cursos
-                        </a>
+                            <Link className="nav-link" to="/cursos">Cursos</Link>
                         </li>
-                        <li className="nav-item">
-                            <a href="#" className="nav-link">
-                                Contato
-                        </a>
-                        </li>
-                        {/* <Link className="nav-link" to="/cursos">Cursos</Link>
-
                         <li className="nav-item">
                             <Link className="nav-link" to="/contato">Contato</Link>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
             </nav >
